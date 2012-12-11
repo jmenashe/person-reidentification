@@ -1,0 +1,29 @@
+#!/usr/bin/env python
+
+import sys, os
+
+def auroc(data):
+  area = 0
+  for i in range(len(data) - 1):
+    dx = data[i + 1][0] - data[i][0]
+    y = (data[i + 1][1] + data[i][0]) / 2
+    area += dx * y
+  area /= 632**2
+  return area
+
+
+results = []
+for file in os.listdir('.'):
+  if not file[-4:] == ".csv": continue
+  f = open(file, 'r')
+  data = []
+  for line in f:
+    parts = line.partition(',')
+    data += [[float(parts[0]), float(parts[2])]]
+  a = auroc(data)
+  results += [[file, a]]
+  f.close()
+
+results = sorted(results, key = lambda r: r[1])
+for f, a in results:
+  print "%s: %2.4f" % (f, a)

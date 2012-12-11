@@ -1,0 +1,12 @@
+build/
+images/
+viper/
+CMakeFiles/
+CMakeCache.txt
+notes.txt
+*.swp
+cmake_install.cmake
+Makefile
+src/ignore.cpp
+SVMFiles/
+lab_images/

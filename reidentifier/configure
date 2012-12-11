@@ -1,0 +1,2 @@
+#!/usr/bin/env sh
+sudo apt-get install libcv-dev libcv2.3 yaml-cpp

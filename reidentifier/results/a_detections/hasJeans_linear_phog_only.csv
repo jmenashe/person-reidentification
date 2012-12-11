@@ -1,0 +1,6 @@
+Detector:
+TP: 254, FP: 525, TN: 203, FN: 117
+Accuracy 0.415833, Precision: 0.326059, Recall: 0.684636
+Random:
+TP: 179, FP: 371, TN: 357, FN: 192
+Accuracy 0.487716, Precision: 0.325455, Recall: 0.48248
